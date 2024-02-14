@@ -12,7 +12,7 @@ const App = () => {
     ])
       // apihosting....
       useEffect(() => {
-        axios.get('https:rendering....link')
+        axios.get('mongodb://localhost:27017')
         .then(res => {
           console.log(res.data)
           setExpenses(res.data)
@@ -21,7 +21,7 @@ const App = () => {
       }, [])
 
   const addExpenses = (Title, Amount) => {
-    const nextId = table[table.length - 1].id+1
+    // const nextId = table[table.length - 1].id+1
     setExpenses([...table, {Title: Title, Amount: Amount}])
   }
   const deleteExpense = (id) => {
